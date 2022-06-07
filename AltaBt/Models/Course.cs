@@ -1,0 +1,18 @@
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace AltaBt.Models
+{
+    public class Course
+    {
+        [Key]
+        public int Courses { get; set; }
+        public string CourseName { get; set; }
+        public DateTime start_day { get; set; }
+        public DateTime end_day { get; set; }
+        public string Time { get; set; }
+        public int Status { get; set; }
+        public int numberday { get; set; }
+        public Class Class { get; set; }
+        public int ClassId { get; set; }
+    }
+}

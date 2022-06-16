@@ -167,6 +167,8 @@ namespace AltaBt.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+
+
             migrationBuilder.CreateIndex(
                 name: "IX_Chats_ClassId",
                 table: "Chats",

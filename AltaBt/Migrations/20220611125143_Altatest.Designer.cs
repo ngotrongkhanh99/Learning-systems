@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AltaBt.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20220607053926_Altatest")]
+    [Migration("20220611125143_Altatest")]
     partial class Altatest
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

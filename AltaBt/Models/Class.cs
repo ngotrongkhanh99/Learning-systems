@@ -21,5 +21,6 @@ namespace AltaBt.Models
         public string UsernameHV { get; set; }
         public Subject Subject { get; set; }
         public int subjectID { get; set; }
+        public int TestId { get; set; }
     }
 }

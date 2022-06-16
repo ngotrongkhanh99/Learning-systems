@@ -4,6 +4,7 @@ using AltaBt.DBContext;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AltaBt.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20220611125550_update-testdb")]
+    partial class updatetestdb
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -75,9 +77,6 @@ namespace AltaBt.Migrations
                     b.Property<string>("TeacherUsernameGV")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
-
-                    b.Property<int>("TestId")
-                        .HasColumnType("int");
 
                     b.Property<string>("Time")
                         .IsRequired()
@@ -266,67 +265,6 @@ namespace AltaBt.Migrations
                     b.ToTable("Teachers");
                 });
 
-            modelBuilder.Entity("AltaBt.Models.Test", b =>
-                {
-                    b.Property<int>("TestId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("TestId"), 1L, 1);
-
-                    b.Property<int>("ClassId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("NameGV")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("NameHV")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("StudentUsernameHV")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("TeacherUsernameGV")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("Time")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("status")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("subjectId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("subjectName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("test")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("test_score")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("upcoming_test")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("TestId");
-
-                    b.HasIndex("StudentUsernameHV");
-
-                    b.HasIndex("TeacherUsernameGV");
-
-                    b.ToTable("tests");
-                });
-
             modelBuilder.Entity("AltaBt.Models.Chat", b =>
                 {
                     b.HasOne("AltaBt.Models.Class", "Class")
@@ -385,21 +323,6 @@ namespace AltaBt.Migrations
                         .IsRequired();
 
                     b.Navigation("Power");
-                });
-
-            modelBuilder.Entity("AltaBt.Models.Test", b =>
-                {
-                    b.HasOne("AltaBt.Models.Student", "Student")
-                        .WithMany()
-                        .HasForeignKey("StudentUsernameHV");
-
-                    b.HasOne("AltaBt.Models.Teacher", "Teacher")
-                        .WithMany()
-                        .HasForeignKey("TeacherUsernameGV");
-
-                    b.Navigation("Student");
-
-                    b.Navigation("Teacher");
                 });
 #pragma warning restore 612, 618
         }

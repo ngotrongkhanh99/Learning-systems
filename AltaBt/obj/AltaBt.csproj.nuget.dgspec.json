@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Desktop\\Learning-systems\\AltaBt\\AltaBt\\AltaBt.csproj": {}
+    "C:\\Users\\User\\Desktop\\BtALta\\AltaBt\\AltaBt\\AltaBt.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Desktop\\Learning-systems\\AltaBt\\AltaBt\\AltaBt.csproj": {
+    "C:\\Users\\User\\Desktop\\BtALta\\AltaBt\\AltaBt\\AltaBt.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Desktop\\Learning-systems\\AltaBt\\AltaBt\\AltaBt.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Desktop\\BtALta\\AltaBt\\AltaBt\\AltaBt.csproj",
         "projectName": "AltaBt",
-        "projectPath": "C:\\Users\\User\\Desktop\\Learning-systems\\AltaBt\\AltaBt\\AltaBt.csproj",
+        "projectPath": "C:\\Users\\User\\Desktop\\BtALta\\AltaBt\\AltaBt\\AltaBt.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Desktop\\Learning-systems\\AltaBt\\AltaBt\\obj\\",
+        "outputPath": "C:\\Users\\User\\Desktop\\BtALta\\AltaBt\\AltaBt\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

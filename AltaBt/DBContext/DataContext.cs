@@ -10,13 +10,13 @@ namespace AltaBt.DBContext
 
         }
         public DbSet<Chat> Chats { get; set; }
-        public DbSet<Class> Classes { get; set; }
-        public DbSet<Course> Courses { get; set; }
-        public DbSet<Power> Powers { get; set; }
-        public DbSet<Student> Students { get; set; }
+        public DbSet<Lophoc> Lophoc { get; set; }
+        public DbSet<Khoahoc> Khoahoc { get; set; }
+        public DbSet<Bangdiem> Bangdiem { get; set; }
+        public DbSet<User> User { get; set; }
         public DbSet<Teacher> Teachers { get; set; }
-        public DbSet<Subject> Subjects { get; set; }
-        public DbSet<Test> tests { get; set; }
+        public DbSet<Monhoc> Monhoc { get; set; }
+        public DbSet<Baikiemtra> Baikiemtra { get; set; }
 
 
     }

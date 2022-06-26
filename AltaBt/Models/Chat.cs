@@ -7,7 +7,7 @@ namespace AltaBt.Models
         [Key]
         public int Id { get; set; }
         public string Question { get; set; }
-        public Class Class { get; set; }
+        public Lophoc Class { get; set; }
         public int ClassId { get; set; }
     }
 }

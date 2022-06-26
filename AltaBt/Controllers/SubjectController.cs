@@ -35,7 +35,7 @@ namespace AltaBt.Controllers
             return Ok(sj);
         }
         [HttpPost]
-        public ActionResult postSubject(Subject Sj)
+        public ActionResult postSubject(Monhoc Sj)
         {
             _isubject.create(Sj);
             return Ok();
@@ -48,7 +48,7 @@ namespace AltaBt.Controllers
             return NoContent();
         }
         [HttpPut]
-        public ActionResult Update(Subject Sj)
+        public ActionResult Update(Monhoc Sj)
         {
             _isubject.update(Sj);
             return NoContent();

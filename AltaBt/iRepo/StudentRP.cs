@@ -10,32 +10,32 @@ namespace AltaBt.iRepo
         {
             _dataContext = dataContext;
         }
-        public void create(Student Std)
+        public void create(User Std)
         {
-            _dataContext.Students.Add(Std);
+            _dataContext.User.Add(Std);
             _dataContext.SaveChanges();
         }
 
         public void delete(string UsernameHV)
         {
-            var p = _dataContext.Students.FirstOrDefault(x => x.UsernameHV == UsernameHV);
-            _dataContext.Students.Remove(p);
+            var p = _dataContext.User.FirstOrDefault(x => x.TaikhoanHV == UsernameHV);
+            _dataContext.User.Remove(p);
             _dataContext.SaveChanges();
         }
 
-        public Student get(string UsernameHV)
+        public User get(string UsernameHV)
         {
-            return _dataContext.Students.FirstOrDefault(x => x.UsernameHV == UsernameHV);
+            return _dataContext.User.FirstOrDefault(x => x.TaikhoanHV == UsernameHV);
         }
 
-        public IEnumerable<Student> getAll()
+        public IEnumerable<User> getAll()
         {
-            return _dataContext.Students.ToList();
+            return _dataContext.User.ToList();
         }
 
-        public void update(Student Std)
+        public void update(User Std)
         {
-            _dataContext.Students.Update(Std);
+            _dataContext.User.Update(Std);
             _dataContext.SaveChanges();
         }
     }

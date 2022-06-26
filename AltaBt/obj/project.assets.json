@@ -2064,11 +2064,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\Desktop\\BtALta\\AltaBt\\AltaBt\\AltaBt.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Desktop\\sss\\Learning-systems\\AltaBt\\AltaBt.csproj",
       "projectName": "AltaBt",
-      "projectPath": "C:\\Users\\User\\Desktop\\BtALta\\AltaBt\\AltaBt\\AltaBt.csproj",
+      "projectPath": "C:\\Users\\User\\Desktop\\sss\\Learning-systems\\AltaBt\\AltaBt.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\Desktop\\BtALta\\AltaBt\\AltaBt\\obj\\",
+      "outputPath": "C:\\Users\\User\\Desktop\\sss\\Learning-systems\\AltaBt\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

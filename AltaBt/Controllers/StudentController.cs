@@ -35,7 +35,7 @@ namespace AltaBt.Controllers
             return Ok(st);
         }
         [HttpPost]
-        public ActionResult postStudent(Student st)
+        public ActionResult postStudent(User st)
         {
             _istudent.create(st);
             return Ok();
@@ -48,7 +48,7 @@ namespace AltaBt.Controllers
             return NoContent();
         }
         [HttpPut]
-        public ActionResult Update(Student Std)
+        public ActionResult Update(User Std)
         {
             _istudent.update(Std);
             return NoContent();

@@ -17,21 +17,21 @@ namespace AltaBt.Controllers
             _context = context;
         }
         [HttpGet]
-        public async Task<IEnumerable<Class>> Get() => await _context.Classes.ToListAsync();
+        public async Task<IEnumerable<Lophoc>> Get() => await _context.Lophoc.ToListAsync();
         [HttpGet("id")]
         public async Task<ActionResult> GetById(int id)
         {
-            var Class = await _context.Classes.FindAsync(id);
+            var Class = await _context.Lophoc.FindAsync(id);
             return Class == null ? NotFound() : Ok(Class);
         }
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status201Created)]
-        public async Task<IActionResult> Create(Class @class)
+        public async Task<IActionResult> Create(Lophoc @class)
         {
-            await _context.Classes.AddAsync(@class);
+            await _context.Lophoc.AddAsync(@class);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction(nameof(GetById), new { id = @class.ClassId }, @class) ;
+            return CreatedAtAction(nameof(GetById), new { id = @class.IdLophoc }, @class) ;
         }
     }
 }

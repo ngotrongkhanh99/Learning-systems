@@ -4,10 +4,10 @@ namespace AltaBt.iRepo
 {
     public interface ITest
     {
-        IEnumerable<Test> getAll();
-        Test get(int TestId);
-        public void create(Test test);
-        public void update(Test test);
+        IEnumerable<Baikiemtra> getAll();
+        Baikiemtra get(int TestId);
+        public void create(Baikiemtra test);
+        public void update(Baikiemtra test);
         public void delete(int TestId);
     }
 }

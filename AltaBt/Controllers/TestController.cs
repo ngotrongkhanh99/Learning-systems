@@ -35,7 +35,7 @@ namespace AltaBt.Controllers
             return Ok(t);
         }
         [HttpPost]
-        public ActionResult postTest(Test test)
+        public ActionResult postTest(Baikiemtra test)
         {
             _itest.create(test);
             return Ok();
@@ -47,7 +47,7 @@ namespace AltaBt.Controllers
             return NoContent();
         }
         [HttpPut]
-        public ActionResult Update(Test test)
+        public ActionResult Update(Baikiemtra test)
         {
             _itest.update(test);
             return NoContent();

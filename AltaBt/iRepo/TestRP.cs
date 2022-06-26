@@ -10,32 +10,32 @@ namespace AltaBt.iRepo
         {
             _dataContext = dataContext;
         }
-        public void create(Test test)
+        public void create(Baikiemtra test)
         {
-            _dataContext.tests.Add(test);
+            _dataContext.Baikiemtra.Add(test);
             _dataContext.SaveChanges();
         }
 
         public void delete(int TestId)
         {
-            var p = _dataContext.tests.FirstOrDefault(x => x.TestId == TestId);
-            _dataContext.tests.Remove(p);
+            var p = _dataContext.Baikiemtra.FirstOrDefault(x => x.IdKiemtra == TestId);
+            _dataContext.Baikiemtra.Remove(p);
             _dataContext.SaveChanges();
         }
 
-        public Test get(int TestId)
+        public Baikiemtra get(int TestId)
         {
-            return _dataContext.tests.FirstOrDefault(x => x.TestId == TestId);
+            return _dataContext.Baikiemtra.FirstOrDefault(x => x.IdKiemtra == TestId);
         }
 
-        public IEnumerable<Test> getAll()
+        public IEnumerable<Baikiemtra> getAll()
         {
-            return _dataContext.tests.ToList();
+            return _dataContext.Baikiemtra.ToList();
         }
 
-        public void update(Test test)
+        public void update(Baikiemtra test)
         {
-            _dataContext.tests.Update(test);
+            _dataContext.Baikiemtra.Update(test);
             _dataContext.SaveChanges();
         }
     }

@@ -4,6 +4,7 @@ using AltaBt.DBContext;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AltaBt.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20220626174250_updatetable")]
+    partial class updatetable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -78,9 +80,6 @@ namespace AltaBt.Migrations
                     b.Property<int>("LophocIdLophoc")
                         .HasColumnType("int");
 
-                    b.Property<int>("MonhocIdMonhoc")
-                        .HasColumnType("int");
-
                     b.Property<string>("Nhanxet")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -100,8 +99,6 @@ namespace AltaBt.Migrations
                     b.HasKey("IdBangdiem");
 
                     b.HasIndex("LophocIdLophoc");
-
-                    b.HasIndex("MonhocIdMonhoc");
 
                     b.ToTable("Bangdiem");
                 });
@@ -306,15 +303,7 @@ namespace AltaBt.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("AltaBt.Models.Monhoc", "Monhoc")
-                        .WithMany()
-                        .HasForeignKey("MonhocIdMonhoc")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.Navigation("Lophoc");
-
-                    b.Navigation("Monhoc");
                 });
 
             modelBuilder.Entity("AltaBt.Models.Chat", b =>

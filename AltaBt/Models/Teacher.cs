@@ -11,7 +11,7 @@ namespace AltaBt.Models
         public int active { get; set; }
         public string Phone { get; set; }
         public string Email { get; set; }
-        public Power Power { get; set; }
+        public Bangdiem Power { get; set; }
         public int Id { get; set; }
     }
 }

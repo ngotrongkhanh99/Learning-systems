@@ -10,31 +10,31 @@ namespace AltaBt.iRepo
         {
             _dataContext = dataContext;
         }
-        public void create(Power power)
+        public void create(Bangdiem power)
         {
-            _dataContext.Powers.Add(power);
+            _dataContext.Bangdiem.Add(power);
             _dataContext.SaveChanges();
         }
 
         public void delete(int id)
         {
-            var p = _dataContext.Powers.FirstOrDefault(x => x.Id == id);
-            _dataContext.Powers.Remove(p) ;
+            var p = _dataContext.Bangdiem.FirstOrDefault(x => x.IdBangdiem == id);
+            _dataContext.Bangdiem.Remove(p) ;
             _dataContext.SaveChanges() ;
         }
 
-        public Power get(int id)
+        public Bangdiem get(int id)
         {
-            return _dataContext.Powers.FirstOrDefault(x=>x.Id == id);
+            return _dataContext.Bangdiem.FirstOrDefault(x=>x.IdBangdiem == id);
         }
 
-        public IEnumerable<Power> getAll()
+        public IEnumerable<Bangdiem> getAll()
         {
-            return _dataContext.Powers.ToList();
+            return _dataContext.Bangdiem.ToList();
         }
-        public void update(Power power)
+        public void update(Bangdiem power)
         {
-            _dataContext.Powers.Update(power);
+            _dataContext.Bangdiem.Update(power);
             _dataContext.SaveChanges();
         }
 

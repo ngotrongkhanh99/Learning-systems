@@ -4,10 +4,10 @@ namespace AltaBt.iRepo
 {
     public interface ISubject
     {
-        IEnumerable<Subject> getAll();
-        Subject get(int subjectID);
-        public void create(Subject Sj);
-        public void update(Subject Sj);
+        IEnumerable<Monhoc> getAll();
+        Monhoc get(int subjectID);
+        public void create(Monhoc Sj);
+        public void update(Monhoc Sj);
         public void delete(int subjectID);
     }
 }

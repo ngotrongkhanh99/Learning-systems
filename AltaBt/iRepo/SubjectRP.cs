@@ -10,32 +10,32 @@ namespace AltaBt.iRepo
         {
             _dataContext = dataContext;
         }
-        public void create(Subject Sj)
+        public void create(Monhoc Sj)
         {
-            _dataContext.Subjects.Add(Sj);
+            _dataContext.Monhoc.Add(Sj);
             _dataContext.SaveChanges();
         }
 
         public void delete(int subjectID)
         {
-            var p = _dataContext.Subjects.FirstOrDefault(x => x.subjectID == subjectID);
-            _dataContext.Subjects.Remove(p);
+            var p = _dataContext.Monhoc.FirstOrDefault(x => x.IdMonhoc == subjectID);
+            _dataContext.Monhoc.Remove(p);
             _dataContext.SaveChanges();
         }
 
-        public Subject get(int subjectID)
+        public Monhoc get(int subjectID)
         {
-            return _dataContext.Subjects.FirstOrDefault(x => x.subjectID == subjectID);
+            return _dataContext.Monhoc.FirstOrDefault(x => x.IdMonhoc == subjectID);
         }
 
-        public IEnumerable<Subject> getAll()
+        public IEnumerable<Monhoc> getAll()
         {
-            return _dataContext.Subjects.ToList();
+            return _dataContext.Monhoc.ToList();
         }
 
-        public void update(Subject Sj)
+        public void update(Monhoc Sj)
         {
-            _dataContext.Subjects.Update(Sj);
+            _dataContext.Monhoc.Update(Sj);
             _dataContext.SaveChanges();
         }
     }

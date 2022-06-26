@@ -35,7 +35,7 @@ namespace AltaBt.Controllers
             return Ok(poweri);
         }
         [HttpPost]
-        public ActionResult postPower(Power power)
+        public ActionResult postPower(Bangdiem power)
         {
             _ipower.create(power);
             return Ok();
@@ -48,7 +48,7 @@ namespace AltaBt.Controllers
             return NoContent();
         }
         [HttpPut]
-        public ActionResult Update(Power p)
+        public ActionResult Update(Bangdiem p)
         {
             _ipower.update(p);
             return NoContent();

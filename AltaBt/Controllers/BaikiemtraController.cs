@@ -7,10 +7,10 @@ namespace AltaBt.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class TestController : ControllerBase
+    public class BaikiemtraController : ControllerBase
     {
-        public readonly ITest _itest;
-        public TestController(ITest itest)
+        public readonly IBaiKiemtra _itest;
+        public BaikiemtraController(IBaiKiemtra itest)
         {
             _itest = itest;
         }
@@ -24,10 +24,10 @@ namespace AltaBt.Controllers
             }
             return Ok(t);
         }
-        [HttpGet("{TestId}")]
-        public ActionResult getTest(int TestId)
+        [HttpGet("{IdKiemtra}")]
+        public ActionResult get(int IdKiemtra)
         {
-            var t = _itest.get(TestId);
+            var t = _itest.get(IdKiemtra);
             if (t == null)
             {
                 return NotFound();
@@ -40,10 +40,10 @@ namespace AltaBt.Controllers
             _itest.create(test);
             return Ok();
         }
-        [HttpDelete("{TestId}")]
-        public ActionResult Delete(int TestId)
+        [HttpDelete("{IdKiemtra}")]
+        public ActionResult Delete(int IdKiemtra)
         {
-            _itest.delete(TestId);
+            _itest.delete(IdKiemtra);
             return NoContent();
         }
         [HttpPut]

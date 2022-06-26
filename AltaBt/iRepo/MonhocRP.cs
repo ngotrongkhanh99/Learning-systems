@@ -3,10 +3,10 @@ using AltaBt.Models;
 
 namespace AltaBt.iRepo
 {
-    public class SubjectRP : ISubject
+    public class MonhocRP : IMonhoc
     {
         private readonly DataContext _dataContext;
-        public SubjectRP(DataContext dataContext)
+        public MonhocRP(DataContext dataContext)
         {
             _dataContext = dataContext;
         }
@@ -16,16 +16,16 @@ namespace AltaBt.iRepo
             _dataContext.SaveChanges();
         }
 
-        public void delete(int subjectID)
+        public void delete(int IdMonhoc)
         {
-            var p = _dataContext.Monhoc.FirstOrDefault(x => x.IdMonhoc == subjectID);
+            var p = _dataContext.Monhoc.FirstOrDefault(x => x.IdMonhoc == IdMonhoc);
             _dataContext.Monhoc.Remove(p);
             _dataContext.SaveChanges();
         }
 
-        public Monhoc get(int subjectID)
+        public Monhoc get(int IdMonhoc)
         {
-            return _dataContext.Monhoc.FirstOrDefault(x => x.IdMonhoc == subjectID);
+            return _dataContext.Monhoc.FirstOrDefault(x => x.IdMonhoc == IdMonhoc);
         }
 
         public IEnumerable<Monhoc> getAll()

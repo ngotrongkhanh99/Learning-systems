@@ -7,10 +7,10 @@ namespace AltaBt.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class SubjectController : ControllerBase
+    public class MonhocController : ControllerBase
     {
-        public readonly ISubject _isubject;
-        public SubjectController(ISubject isubject)
+        public readonly IMonhoc _isubject;
+        public MonhocController(IMonhoc isubject)
         {
             _isubject = isubject;
         }
@@ -24,10 +24,10 @@ namespace AltaBt.Controllers
             }
             return Ok(sj);
         }
-        [HttpGet("{subjectID}")]
-        public ActionResult getSubject(int subjectID)
+        [HttpGet("{IdMonhoc}")]
+        public ActionResult getSubject(int IdMonhoc)
         {
-            var sj = _isubject.get(subjectID);
+            var sj = _isubject.get(IdMonhoc);
             if (sj == null)
             {
                 return NotFound();
@@ -41,10 +41,10 @@ namespace AltaBt.Controllers
             return Ok();
         }
 
-        [HttpDelete("{subjectID}")]
-        public ActionResult Delete(int subjectID)
+        [HttpDelete("{IdMonhoc}")]
+        public ActionResult Delete(int IdMonhoc)
         {
-            _isubject.delete(subjectID);
+            _isubject.delete(IdMonhoc);
             return NoContent();
         }
         [HttpPut]

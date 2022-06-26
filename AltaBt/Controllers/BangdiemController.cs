@@ -7,10 +7,10 @@ namespace AltaBt.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class PowerController : ControllerBase
+    public class BangdiemController : ControllerBase
     {
-        public readonly IPower _ipower;
-        public PowerController(IPower ipower)
+        public readonly IBangdiem _ipower;
+        public BangdiemController(IBangdiem ipower)
         {
             _ipower = ipower;
         }
@@ -24,10 +24,10 @@ namespace AltaBt.Controllers
             }
             return Ok(poweri);
         }
-        [HttpGet("{id}")]
-        public ActionResult getPower(int id)
+        [HttpGet("{IdBangdiem}")]
+        public ActionResult getPower(int IdBangdiem)
         {
-            var poweri = _ipower.get(id);
+            var poweri = _ipower.get(IdBangdiem);
             if (poweri == null)
             {
                 return NotFound();
@@ -41,10 +41,10 @@ namespace AltaBt.Controllers
             return Ok();
         }
         
-        [HttpDelete("{id}")]
-        public ActionResult Delete(int id)
+        [HttpDelete("{IdBangdiem}")]
+        public ActionResult Delete(int IdBangdiem)
         {
-            _ipower.delete(id);
+            _ipower.delete(IdBangdiem);
             return NoContent();
         }
         [HttpPut]

@@ -3,10 +3,10 @@ using AltaBt.Models;
 
 namespace AltaBt.iRepo
 {
-    public class StudentRP : IStudent
+    public class UserRP : IUser
     {
         private readonly DataContext _dataContext;
-        public StudentRP(DataContext dataContext)
+        public UserRP(DataContext dataContext)
         {
             _dataContext = dataContext;
         }

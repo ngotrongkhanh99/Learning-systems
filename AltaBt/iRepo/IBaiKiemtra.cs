@@ -2,12 +2,12 @@
 
 namespace AltaBt.iRepo
 {
-    public interface ITest
+    public interface IBaiKiemtra
     {
         IEnumerable<Baikiemtra> getAll();
-        Baikiemtra get(int TestId);
+        Baikiemtra get(int IdKiemtra);
         public void create(Baikiemtra test);
         public void update(Baikiemtra test);
-        public void delete(int TestId);
+        public void delete(int IdKiemtra);
     }
 }

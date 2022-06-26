@@ -3,10 +3,10 @@ using AltaBt.Models;
 
 namespace AltaBt.iRepo
 {
-    public class TestRP : ITest
+    public class BaikiemtraRP : IBaiKiemtra
     {
         private readonly DataContext _dataContext;
-        public TestRP(DataContext dataContext)
+        public BaikiemtraRP(DataContext dataContext)
         {
             _dataContext = dataContext;
         }
@@ -16,16 +16,16 @@ namespace AltaBt.iRepo
             _dataContext.SaveChanges();
         }
 
-        public void delete(int TestId)
+        public void delete(int IdKiemtra)
         {
-            var p = _dataContext.Baikiemtra.FirstOrDefault(x => x.IdKiemtra == TestId);
+            var p = _dataContext.Baikiemtra.FirstOrDefault(x => x.IdKiemtra == IdKiemtra);
             _dataContext.Baikiemtra.Remove(p);
             _dataContext.SaveChanges();
         }
 
-        public Baikiemtra get(int TestId)
+        public Baikiemtra get(int IdKiemtra)
         {
-            return _dataContext.Baikiemtra.FirstOrDefault(x => x.IdKiemtra == TestId);
+            return _dataContext.Baikiemtra.FirstOrDefault(x => x.IdKiemtra == IdKiemtra);
         }
 
         public IEnumerable<Baikiemtra> getAll()

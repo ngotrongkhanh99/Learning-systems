@@ -3,10 +3,10 @@ using AltaBt.Models;
 
 namespace AltaBt.iRepo
 {
-    public class PowerRP : IPower
+    public class BangdiemRP : IBangdiem
     {
         private readonly DataContext _dataContext;
-        public PowerRP(DataContext dataContext) 
+        public BangdiemRP(DataContext dataContext) 
         {
             _dataContext = dataContext;
         }
@@ -16,16 +16,16 @@ namespace AltaBt.iRepo
             _dataContext.SaveChanges();
         }
 
-        public void delete(int id)
+        public void delete(int IdBangdiem)
         {
-            var p = _dataContext.Bangdiem.FirstOrDefault(x => x.IdBangdiem == id);
+            var p = _dataContext.Bangdiem.FirstOrDefault(x => x.IdBangdiem == IdBangdiem);
             _dataContext.Bangdiem.Remove(p) ;
             _dataContext.SaveChanges() ;
         }
 
-        public Bangdiem get(int id)
+        public Bangdiem get(int IdBangdiem)
         {
-            return _dataContext.Bangdiem.FirstOrDefault(x=>x.IdBangdiem == id);
+            return _dataContext.Bangdiem.FirstOrDefault(x=>x.IdBangdiem == IdBangdiem);
         }
 
         public IEnumerable<Bangdiem> getAll()

@@ -12,11 +12,12 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddScoped<IPower, PowerRP>();
-builder.Services.AddScoped<IStudent, StudentRP>();
+builder.Services.AddScoped<IBangdiem, BangdiemRP>();
+builder.Services.AddScoped<IUser, UserRP>();
 builder.Services.AddScoped<ITeacher, TeacherRP>();
-builder.Services.AddScoped<ISubject, SubjectRP>();
-builder.Services.AddScoped<ITest, TestRP>();
+builder.Services.AddScoped<IMonhoc, MonhocRP>();
+builder.Services.AddScoped<IKhoahoc, KhoahocRP>();
+builder.Services.AddScoped<IBaiKiemtra, BaikiemtraRP>();
 
 
 

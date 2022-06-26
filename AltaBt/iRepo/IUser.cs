@@ -2,7 +2,7 @@
 
 namespace AltaBt.iRepo
 {
-    public interface IStudent
+    public interface IUser
     {
         IEnumerable<User> getAll();
         User get(string UsernameHV);

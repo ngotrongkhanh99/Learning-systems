@@ -7,10 +7,10 @@ namespace AltaBt.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class StudentController : ControllerBase
+    public class UserController : ControllerBase
     {
-        public readonly IStudent _istudent;
-        public StudentController(IStudent istudent)
+        public readonly IUser _istudent;
+        public UserController(IUser istudent)
         {
             _istudent = istudent;
         }

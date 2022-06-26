@@ -2,12 +2,12 @@
 
 namespace AltaBt.iRepo
 {
-    public interface ISubject
+    public interface IMonhoc
     {
         IEnumerable<Monhoc> getAll();
-        Monhoc get(int subjectID);
+        Monhoc get(int IdMonhoc);
         public void create(Monhoc Sj);
         public void update(Monhoc Sj);
-        public void delete(int subjectID);
+        public void delete(int IdMonhoc);
     }
 }
